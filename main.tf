@@ -19,9 +19,10 @@ resource "minio_s3_bucket" "tp1_bucket" {
   acl    = "private"
 }
 
+
 resource "minio_s3_bucket" "web_bucket" {
   bucket = "webbucket"
-  acl    = "private"
+  acl    = "public-read" 
 }
 
 resource "minio_s3_object" "index_html" {
